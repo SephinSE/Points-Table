@@ -1,9 +1,4 @@
 function main() {
-//var oldSkool = document.getElementById("Old Skool FC");
-//var pakyo = document.getElementById("Pakyo FC");
-//var ronaq = document.getElementById("Ronaq FC");
-//var rosario = document.getElementById("Rosario FC");
-//var sigma = document.getElementById("Sigma FC");
 
 var teamA = document.getElementById('teamA').value;
 var teamB = document.getElementById('teamB').value;
@@ -55,6 +50,7 @@ bGoalDiff = parseInt(bGoalDiff);
 
 if(aScore>bScore) {
     // team A wins
+    // team B loses
     aMatches++;
     bMatches++;
     aWin++;
@@ -67,6 +63,7 @@ if(aScore>bScore) {
     aGoalDiff = aGoalsFor-aGoalsAgainst;
     bGoalDiff = bGoalsFor-bGoalsAgainst;
 } else if(aScore==bScore) {
+        // both teams draw
         aMatches++;
         bMatches++;
         aDraw++;
@@ -80,6 +77,8 @@ if(aScore>bScore) {
         aGoalDiff = aGoalsFor-aGoalsAgainst;
         bGoalDiff = bGoalsFor-bGoalsAgainst;
   } else {
+            // team A loses
+            // team B wins
             aMatches++;
             bMatches++;
             aLoss++;
