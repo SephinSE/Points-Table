@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Points Table</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </head>
 <body>
     <div>
-        <table>
+        <table id="theTable">
             <tr id="table_head">
                 <th>No.</th>
                 <th>TEAM</th>
@@ -26,72 +26,93 @@
             <tr id="Old Skool FC">
                 <td>1</td>
                 <td>Old Skool FC</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
+                <td id="M">0</td>
+                <td id="W">0</td>
+                <td id="D">0</td>
+                <td id="L">0</td>
+                <td id="Pts">0</td>
+                <td id="GF">0</td>
+                <td id="GA">0</td>
+                <td id="GD">0</td>
             </tr>
             <tr id="Pakyo FC">
                 <td>2</td>
                 <td>Pakyo FC</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
+                <td id="M">0</td>
+                <td id="W">0</td>
+                <td id="D">0</td>
+                <td id="L">0</td>
+                <td id="Pts">0</td>
+                <td id="GF">0</td>
+                <td id="GA">0</td>
+                <td id="GD">0</td>
             </tr>
             <tr id="Ronaq FC">
                 <td>3</td>
                 <td>Ronaq FC</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
+                <td id="M">0</td>
+                <td id="W">0</td>
+                <td id="D">0</td>
+                <td id="L">0</td>
+                <td id="Pts">0</td>
+                <td id="GF">0</td>
+                <td id="GA">0</td>
+                <td id="GD">0</td>
             </tr>
             <tr id="Rosario FC">
                 <td>4</td>
                 <td>Rosario FC</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
+                <td id="M">0</td>
+                <td id="W">0</td>
+                <td id="D">0</td>
+                <td id="L">0</td>
+                <td id="Pts">0</td>
+                <td id="GF">0</td>
+                <td id="GA">0</td>
+                <td id="GD">0</td>
             </tr>
-            <tr id="table_foot">
-                <td class="btleft">5</td>
+            <tr id="Sigma FC">
+                <td id="btleft">5</td>
                 <td>Sigma FC</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td class="btright">0</td>
+                <td id="M">0</td>
+                <td id="W">0</td>
+                <td id="D">0</td>
+                <td id="L">0</td>
+                <td id="Pts">0</td>
+                <td id="GF">0</td>
+                <td id="GA">0</td>
+                <td class="btright" id="GD">0</td>
             </tr>
         </table>
     </div>
     <div class="scoreboard">
-        <h2 id="teamA">Sigma FC</h2>
-        <div class="score"> 
-            <input type="number" id="aScore">
-            <input type="number" id="bScore">
+        <div class="aScore">
+            <select name="teamA" id="teamA" required>
+                <option value="" disabled selected hidden>Select a team</option>
+                <option value="Old Skool FC">Old Skool FC</option>
+                <option value="Pakyo FC">Pakyo FC</option>
+                <option value="Ronaq FC">Ronaq FC</option>
+                <option value="Rosario FC">Rosario FC</option>
+                <option value="Sigma FC">Sigma FC</option>
+            </select>
+            <input type="number" id="aScore" class="score" min="0" value="0" required>
         </div>
-        <h2 id="teamB">Old Skool FC</h2>
+        <h2 class="white">:</h2>
+        <div class="bScore">
+            <input type="number" class="score" id="bScore" min="0" value="0" required>
+            <select name="teamB" id="teamB">
+                <option value="" disabled selected hidden>Select a team</option>
+                <option value="Old Skool FC">Old Skool FC</option>
+                <option value="Pakyo FC">Pakyo FC</option>
+                <option value="Ronaq FC">Ronaq FC</option>
+                <option value="Rosario FC">Rosario FC</option>
+                <option value="Sigma FC">Sigma FC</option>
+            </select>
+        </div>
     </div>
+    <div class="submitdiv">
+        <button type="button" onclick="main()" id="submit">Submit</button> 
+    </div>
+    <h2 id="head" class="white"></h2>
 </body>
 </html>
